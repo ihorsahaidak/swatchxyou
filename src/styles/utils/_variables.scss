@@ -1,0 +1,28 @@
+// breakpoints
+$breakpoints: (
+    mobile: 400px,
+    tablet: 768px,
+    desktop: 1024px,
+    widescreen: 1280px
+);
+
+@function breakpoint($breakpoint) {
+  @return map_get($breakpoints, $breakpoint)
+}
+
+// colors
+$colors: (
+    white: #fff,
+    black: #000
+);
+
+@function color($color) {
+  @return map_get($colors, $color)
+}
+
+// theme colors
+$theme-colors: (
+    text: color(black)
+);
+
+$colors: map_merge($colors, $theme-colors);
