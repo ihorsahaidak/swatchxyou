@@ -1,8 +1,8 @@
 {
-  "name": "react-scss-starter-kit",
+  "name": "swatchxyou",
   "version": "1.1.0",
   "homepage": "https://ihorsahaydak.github.io/swatchxyou/",
-  "author": "hello@pierrecabriere.fr",
+  "author": "ihorsahaydak@gmail.com",
   "dependencies": {
     "autoprefixer": "9.1.0",
     "babel-core": "6.26.3",
