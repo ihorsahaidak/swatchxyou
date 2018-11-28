@@ -5,6 +5,26 @@ import './styles.scss'
 
 export default () => (
   <nav className="navbar">
-    Navbar | <Link to='/'>Home222</Link> | <Link to='/about'>About</Link>
+      <Link to='/pre-home'>pre home</Link>
+      { ' . '}
+      <Link to='/'>home</Link>
+      { ' . '}
+      <Link to='/start-building'>start building</Link>
+      { ' . '}
+      <Link to='/watch-model'>watch model</Link>
+      { ' . '}
+      <Link to='/watch-head'>watch head</Link>
+      { ' . '}
+      <Link to='/upper-strap'>upper strap</Link>
+      { ' . '}
+      <Link to='/lower-strap'>lower strap</Link>
+      { ' . '}
+      <Link to='/loop'>loop</Link>
+      { ' . '}
+      <Link to='/accessories'>accessories</Link>
+      { ' . '}
+      <Link to='/preview'>preview</Link>
+      { ' . '}
+      <Link to='/about'>about</Link>
   </nav>
 )

@@ -1,13 +1,13 @@
 import React from 'react';
 
-class Home extends React.Component {
+class Loop extends React.Component {
     render() {
         return (
             <div>
-                Home
+                Loop
             </div>
         );
     }
 }
 
-export default Home;
+export default Loop;

@@ -1,13 +1,13 @@
 import React from 'react';
 
-class Home extends React.Component {
+class PreHome extends React.Component {
     render() {
         return (
             <div>
-                Home
+                PreHome
             </div>
         );
     }
 }
 
-export default Home;
+export default PreHome;

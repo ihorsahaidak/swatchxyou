@@ -1,13 +1,13 @@
 import React from 'react';
 
-class Home extends React.Component {
+class LowerStrap extends React.Component {
     render() {
         return (
             <div>
-                Home
+                LowerStrap
             </div>
         );
     }
 }
 
-export default Home;
+export default LowerStrap;

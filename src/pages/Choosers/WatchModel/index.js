@@ -1,13 +1,13 @@
 import React from 'react';
 
-class Home extends React.Component {
+class WatchModel extends React.Component {
     render() {
         return (
             <div>
-                Home
+                WatchModel
             </div>
         );
     }
 }
 
-export default Home;
+export default WatchModel;

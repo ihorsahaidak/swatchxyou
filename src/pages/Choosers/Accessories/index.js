@@ -1,13 +1,13 @@
 import React from 'react';
 
-class Home extends React.Component {
+class Accessories extends React.Component {
     render() {
         return (
             <div>
-                Home
+                Accessories
             </div>
         );
     }
 }
 
-export default Home;
+export default Accessories;

@@ -1,13 +1,13 @@
 import React from 'react';
 
-class Home extends React.Component {
+class Preview extends React.Component {
     render() {
         return (
             <div>
-                Home
+                Preview
             </div>
         );
     }
 }
 
-export default Home;
+export default Preview;

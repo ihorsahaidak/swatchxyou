@@ -1,13 +1,13 @@
 import React from 'react';
 
-class Home extends React.Component {
+class UpperStrap extends React.Component {
     render() {
         return (
             <div>
-                Home
+                UpperStrap
             </div>
         );
     }
 }
 
-export default Home;
+export default UpperStrap;
