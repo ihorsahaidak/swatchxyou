@@ -1,13 +1,15 @@
 @import "~normalize.css/normalize.css";
 @import "~styles/utils";
 
+@import "~src/libs/wow/animate.css";
+
 html {
   font-size: 17px;
 }
 
 body {
   color: color(text);
-  background: blanchedalmond;
+  background: white;
 }
 
 
