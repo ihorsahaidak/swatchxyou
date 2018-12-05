@@ -1,8 +1,6 @@
 ![swatchxyou](https://shop.swatch.com/skin/frontend/enterprise/Swatch/images/swatchxyou/sXy_logo.png)
-
-## SWATCH X YOU watch builder
-
 ---
+
 
 - [Installation](#1-installation)
   - [Run for development](#11-run-for-development)
@@ -31,6 +29,7 @@ npm run build
 ```
 Then, the build version will be generated in the /build directory
 
+---
 ## Expected result ^^
 
 ![Alt Text](https://media.giphy.com/media/2sbNqdD7WVwZwo36j8/giphy.gif)
