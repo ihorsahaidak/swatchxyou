@@ -1,7 +1,7 @@
 @import "~normalize.css/normalize.css";
 @import "~styles/utils";
 
-@import "~src/libs/wow/animate.css";
+@import "/libs/wow/animate.css";
 
 html {
   font-size: 17px;
@@ -9,7 +9,15 @@ html {
 
 body {
   color: color(text);
-  background: white;
+  background: color(white);
 }
 
+.full-view {
+  width: 100vw;
+  height: 100vh;
+}
+
+.light-violet {
+  background-color: color(light-violet);
+}
 

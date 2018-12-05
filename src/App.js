@@ -3,7 +3,6 @@ import {Switch, Route} from 'react-router-dom';
 
 import withLayout from './Layout'
 
-import PreHome       from 'pages/PreHome'
 import Home          from 'pages/Home'
 import StartBuilding from 'pages/StartBuilding'
 import WatchModel    from 'pages/Choosers/WatchModel'
@@ -17,10 +16,32 @@ import About         from 'pages/About'
 
 @withLayout
 class App extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            scripts: {
+                wow: '/libs/wow/wow.min.js'
+            }
+        }
+    }
+
+    componentWillMount() {
+        let script = document.createElement('script');
+
+        script.src = this.state.scripts.wow;
+        script.async = true;
+
+        script.onload = function() {
+            new window.WOW().init();
+        };
+
+        document.body.appendChild(script);
+    }
+
   render() {
     return (
       <Switch>
-        <Route exact path='/pre-home' component={PreHome} />
         <Route exact path='/' component={Home} />
         <Route exact path='/start-building' component={StartBuilding} />
         <Route exact path='/watch-model' component={WatchModel} />

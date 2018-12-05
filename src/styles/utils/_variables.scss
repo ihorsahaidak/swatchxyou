@@ -12,8 +12,9 @@ $breakpoints: (
 
 // colors
 $colors: (
-    white: #fff,
-    black: #000
+    white: #ffffff,
+    black: #000000,
+    light-violet: #f18181,
 );
 
 @function color($color) {

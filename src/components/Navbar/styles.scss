@@ -1,6 +1,7 @@
 @import "~styles/utils";
 
 .navbar {
+
     padding: 1rem 2rem;
 
     @include media("<=tablet") {

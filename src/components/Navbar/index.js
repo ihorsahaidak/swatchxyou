@@ -3,10 +3,8 @@ import { Link } from 'react-router-dom'
 
 import './styles.scss'
 
-export default () => (
+export default () => ( // TODO remove
   <nav className="navbar">
-      <Link to='/pre-home'>pre home</Link>
-      { ' . '}
       <Link to='/'>home</Link>
       { ' . '}
       <Link to='/start-building'>start building</Link>
