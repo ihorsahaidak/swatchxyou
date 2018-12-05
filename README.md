@@ -1,6 +1,6 @@
 ![swatchxyou](https://shop.swatch.com/skin/frontend/enterprise/Swatch/images/swatchxyou/sXy_logo.png)
 
-### SWATCH X YOU demo application
+## SWATCH X YOU watch builder
 
 ---
 
@@ -8,10 +8,14 @@
   - [Run for development](#11-run-for-development)
   - [Build for production](#12-build-for-production)
 
-## 1 - Installation
+### 1 - Installation
 ```
 git clone https://github.com/ihorsahaydak/swatchxyou.git swatchxyou
+```
+```
 cd swatchxyou
+```
+```
 npm install
 ```
 
