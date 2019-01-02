@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import {Switch, Route} from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 import withLayout from './Layout'
 
@@ -40,7 +41,9 @@ class App extends Component {
     }
 
   render() {
-    return (
+      //console.log(this.props.testStore); // TODO
+
+      return (
       <Switch>
         <Route exact path='/' component={Home} />
         <Route exact path='/start-building' component={StartBuilding} />
@@ -57,4 +60,11 @@ class App extends Component {
   }
 }
 
-export default App;
+export default connect(
+    state => ({
+        testStore: state
+    }),
+    dispatch => ({}),
+    null,
+    { pure: false }
+)(App);
