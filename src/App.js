@@ -41,7 +41,7 @@ class App extends Component {
     }
 
   render() {
-      //console.log(this.props.testStore); // TODO
+      console.log(this.props.testStore); // TODO
 
       return (
       <Switch>
