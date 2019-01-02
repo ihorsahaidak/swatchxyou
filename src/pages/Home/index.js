@@ -13,7 +13,7 @@ class Home extends Component {
                 <input type="text" ref={ (input) => { this.trackInput = input } } />
                 <button onClick={ this.addTrack.bind(this) }>add track</button>
                 <ul className="trackList">
-                    { this.props.testStore.map((track, index) =>
+                    { this.props.tracks.map((track, index) =>
                         <li key={index}>{track}</li>
                     ) }
                 </ul>
@@ -24,7 +24,8 @@ class Home extends Component {
 
 export default connect(
     state => ({
-        testStore: state
+        tracks: state.tracks,
+        playlists: state.playlists,
     }),
     dispatch => ({
         onAddTrack: (trackName) => {

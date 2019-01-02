@@ -1,27 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import App from './App';
-
-
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 
-const  initialState = [
-   'test one',
-   'test two'
-];
+import reducer from './reducers';
 
-function reducer(state = initialState, action) {
-    if (action.type === 'ADD_TRACK') {
-        return [
-            ...state,
-            action.payload
-        ];
-    }
-
-    return state;
-}
+import App from './App';
 
 const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 const root = document.getElementById('root');
