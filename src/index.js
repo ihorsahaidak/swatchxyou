@@ -1,4 +1,3 @@
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
@@ -24,7 +23,7 @@ function reducer(state = initialState, action) {
     return state;
 }
 
-const store = createStore(reducer);
+const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 const root = document.getElementById('root');
 
 ReactDOM.render(
@@ -35,20 +34,3 @@ ReactDOM.render(
     </Provider>,
     root
 );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
