@@ -1,16 +1,16 @@
-import React from 'react';
-
+import React, { Component } from 'react';
 import Configurator from 'components/Configurator'
+import UpperStrapItem from 'components/Watch/UpperStrap'
 
-class UpperStrap extends React.Component {
+class UpperStrap extends Component {
     render() {
         return (
-            <div>
-                <div className={'two-columns'}>
-                    <Configurator />
-                    <div className={'bar-page'}>
-                        upper strap
-                    </div>
+            <div className={'two-columns'}>
+                <Configurator />
+                <div className={'bar-page'}>
+                    <UpperStrapItem code={ 111 } />
+                    <UpperStrapItem code={ 222 } />
+                    <UpperStrapItem code={ 333 } />
                 </div>
             </div>
         );

@@ -1,16 +1,23 @@
-import React from 'react';
-
+import React, { Component } from 'react';
 import './styles.scss'
+import {connect} from "react-redux";
 
 
-class WatchModels extends React.Component {
+class WatchModels extends Component {
     render() {
         return (
             <div className={'watch-models-wrapper'}>
-                WatchModels
+                { this.props.watchmodel }
             </div>
         );
     }
 }
 
-export default WatchModels;
+export default connect(
+    state => ({
+        watchmodel: state.watchmodel,
+    }),
+    dispatch => ({}),
+    null,
+    { pure: false }
+) (WatchModels);

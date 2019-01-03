@@ -1,15 +1,17 @@
-import React from 'react';
-
+import React, { Component } from 'react';
 import Configurator from 'components/Configurator'
+import LoopItem from 'components/Watch/Loop'
 
-class Loop extends React.Component {
+class Loop extends Component {
     render() {
         return (
             <div>
                 <div className={'two-columns'}>
                     <Configurator />
                     <div className={'bar-page'}>
-                        Loop
+                        <LoopItem code={ 999 } />
+                        <LoopItem code={ 222 } />
+                        <LoopItem code={ 666 } />
                     </div>
                 </div>
             </div>

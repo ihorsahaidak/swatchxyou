@@ -1,21 +1,17 @@
-import React from 'react';
-
+import React, { Component } from 'react';
 import Configurator from 'components/Configurator'
+import WatchHeadItem from 'components/Watch/WatchHead'
 
-
-class WatchHead extends React.Component {
+class WatchHead extends Component {
     render() {
         return (
-            <div>
-                <div className={'two-columns'}>
-                    <Configurator />
-
-
-                    <div className={'bar-page'}>
-                        content
-                    </div>
+            <div className={'two-columns'}>
+                <Configurator />
+                <div className={'bar-page'}>
+                    <WatchHeadItem code={ 111 } />
+                    <WatchHeadItem code={ 222 } />
+                    <WatchHeadItem code={ 333 } />
                 </div>
-
             </div>
         );
     }
