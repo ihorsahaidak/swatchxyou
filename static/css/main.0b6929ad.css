@@ -1,3 +1,16 @@
+@import url(/libs/wow/animate.css);.two-columns {
+  display: flex; }
+
+.configurator-wrapper {
+  height: 100vh;
+  background: red;
+  width: 25%; }
+
+.watch {
+  width: 400px;
+  position: relative;
+  margin: 0 auto; }
+
 .navbar {
   padding: 1rem 2rem; }
   @media (max-width: 768px) {
@@ -310,11 +323,127 @@ template {
  */
 [hidden] {
   display: none; }
+.two-columns {
+  display: flex; }
+
+.configurator-wrapper {
+  height: 100vh;
+  background: red;
+  width: 25%; }
+
+.watch {
+  width: 400px;
+  position: relative;
+  margin: 0 auto; }
+
 html {
   font-size: 17px; }
 
 body {
-  color: #000;
-  background: white; }
+  color: #000000;
+  background: #ffffff; }
 
-/*# sourceMappingURL=main.a7a38f96.css.map*/
+.full-view {
+  width: 100vw;
+  height: 100vh; }
+
+.light-violet {
+  background-color: #f18181; }
+.bg-light-green {
+  background: #2ACAB5; }
+
+.bg-violet {
+  background: #CA1D81; }
+.piper {
+  display: table;
+  width: 60%;
+  border-spacing: 15px 15px;
+  background-color: #fff;
+  box-shadow: inset 0 0 0.4375em 0.25em #ccc, -30px 25px 50px #f18181, -30px 25px 25px #000;
+  border-radius: 50px;
+  margin: 0 auto; }
+
+.pipin {
+  background-color: #f18181;
+  box-shadow: 0 0 0.4375em 0.25em #ccc, inset -25px 15px 30px #f18181, inset -25px 15px 30px #000;
+  border-radius: 37.5px;
+  padding: 15px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; }
+
+p {
+  line-height: 1.5; }
+
+.pipe-element {
+  padding: 50px 25px;
+  width: 200px;
+  height: 270px;
+  box-sizing: border-box;
+  position: relative; }
+
+.pipe-element .watchhead {
+  width: 150px;
+  height: 170px;
+  display: block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute; }
+
+.pipe-element i {
+  box-shadow: -15px 15px 100px 0px #000;
+  position: absolute;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; }
+
+.pipe-element:before {
+  content: '';
+  display: block;
+  width: 14px;
+  height: 77px;
+  position: absolute;
+  top: -20px;
+  margin-left: 65px;
+  background-color: #fff;
+  box-shadow: 0 0 0.6em 0.2em #ccc inset;
+  clip-path: polygon(100% 0, 100% 75%, 50% 100%, 0 75%, 0 0); }
+
+.pipe-element:after {
+  content: '';
+  display: block;
+  width: 14px;
+  height: 74px;
+  background-color: #fff;
+  box-shadow: 0 0 0.6em 0.2em #ccc inset;
+  position: absolute;
+  margin-left: 65px;
+  bottom: -20px;
+  clip-path: polygon(50% 0, 100% 30%, 100% 100%, 0 100%, 0 30%); }
+
+.pipe-element.text-element {
+  width: auto;
+  height: auto; }
+
+.pipe-element .text p {
+  padding: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 10px;
+  margin: 0; }
+.watch-models-wrapper {
+  height: 100vh;
+  background: blue;
+  width: 25%; }
+
+/*# sourceMappingURL=main.0b6929ad.css.map*/
