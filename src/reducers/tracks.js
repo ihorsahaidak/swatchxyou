@@ -3,7 +3,7 @@ const initialState = [
     'track 2',
 ];
 
-export default function tracks(state = initialState, action) {
+export default function (state = initialState, action) {
     if (action.type === 'ADD_TRACK') {
         return [
             ...state,

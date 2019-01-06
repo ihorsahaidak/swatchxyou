@@ -14,7 +14,8 @@ class Configurator extends Component {
                 </div>
 
                 <div className={'c-watch-head'}>
-                  WH  { this.props.watchhead }
+
+                    <img src={process.env.PUBLIC_URL + '/images/gent/watchheads/' + this.props.watchhead + '.png'} alt=""/>
                 </div>
 
                 <div className={'c-accessory'}>

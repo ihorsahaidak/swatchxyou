@@ -97,7 +97,8 @@ module.exports = {
       'src': paths.appSrc,
       'styles': paths.appSrc + '/styles',
       'pages': paths.appSrc + '/pages',
-      'components': paths.appSrc + '/components'
+      'components': paths.appSrc + '/components',
+      'constants': paths.appSrc + '/constants'
     },
     plugins: [
       // Prevents users from importing files from outside of src/ (or node_modules/).

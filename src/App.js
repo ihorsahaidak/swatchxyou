@@ -1,19 +1,17 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
-
 import withLayout from './Layout'
-
-import Home          from 'pages/Home'
+import Home from 'pages/Home'
 import StartBuilding from 'pages/StartBuilding'
-import WatchModel    from 'pages/Choosers/WatchModel'
-import WatchHead     from 'pages/Choosers/WatchHead'
-import UpperStrap    from 'pages/Choosers/UpperStrap'
-import LowerStrap    from 'pages/Choosers/LowerStrap'
-import Loop          from 'pages/Choosers/Loop'
-import Accessories   from 'pages/Choosers/Accessories'
-import Preview       from 'pages/Preview'
-import About         from 'pages/About'
+import WatchModel from 'pages/Choosers/WatchModel'
+import WatchHead from 'pages/Choosers/WatchHead'
+import UpperStrap from 'pages/Choosers/UpperStrap'
+import LowerStrap from 'pages/Choosers/LowerStrap'
+import Loop from 'pages/Choosers/Loop'
+import Accessories from 'pages/Choosers/Accessories'
+import Preview from 'pages/Preview'
+import About from 'pages/About'
 
 @withLayout
 class App extends Component {

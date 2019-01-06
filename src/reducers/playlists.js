@@ -3,7 +3,7 @@ const initialState = [
     'pl 2',
 ];
 
-export default function playlists(state = initialState, action) {
+export default function (state = initialState, action) {
     if (action.type === 'ADD_PLAYLIST') {
         return [
             ...state,

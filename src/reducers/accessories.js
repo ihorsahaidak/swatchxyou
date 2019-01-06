@@ -1,4 +1,4 @@
-export default function accessories(state = [], action) {
+export default function (state = [], action) {
     if (action.type === 'ADD_ACCESSORY') {
         return [
             ...state,
