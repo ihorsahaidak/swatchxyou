@@ -1,5 +1,5 @@
 const GENT = 'gent';
-const NEW_GENT = 'new gent';
+const NEW_GENT = 'new_gent';
 const DEFAULT = GENT;
 
 export default function (state = DEFAULT, action) {

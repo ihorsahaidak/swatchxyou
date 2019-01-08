@@ -1,16 +1,25 @@
 import React, { Component } from 'react';
-import { connect } from "react-redux";
+import { connect } from 'react-redux';
+import Empty from 'components/Configurator/Empty'
 
 class Configurator extends Component {
     render() {
         return (
             <div className={'configurator-wrapper'}>
+
+                <Empty />
+
                 <div className={'c-upper-strap'}>
-                  US  { this.props.upperstrap }
+
+
+                    <img src={process.env.PUBLIC_URL + '/images/gent/upperstraps/' + this.props.upperstrap + '.png'} alt=""/>
+
                 </div>
 
                 <div className={'c-loop'}>
-                    L  { this.props.loop }
+
+                    <img src={process.env.PUBLIC_URL + '/images/gent/loops/' + this.props.loop + '.png'} alt=""/>
+
                 </div>
 
                 <div className={'c-watch-head'}>
@@ -27,7 +36,9 @@ class Configurator extends Component {
                 </div>
 
                 <div className={'c-lower-strap'}>
-                   LS { this.props.lowerstrap }
+
+                    <img src={process.env.PUBLIC_URL + '/images/gent/lowerstraps/' + this.props.lowerstrap + '.png'} alt=""/>
+
                 </div>
             </div>
         );

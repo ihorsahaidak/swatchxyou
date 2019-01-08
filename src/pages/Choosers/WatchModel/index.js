@@ -19,8 +19,8 @@ class WatchModel extends React.Component {
                             </button>
                         </div>
                         <div>
-                            <button onClick={ this.setWatchModel.bind(this) } className="pipe-element watch-model-element" data-value="new gent">
-                                new gent
+                            <button onClick={ this.setWatchModel.bind(this) } className="pipe-element watch-model-element" data-value="new_gent">
+                                new_gent
                             </button>
                         </div>
                     </Pipe>

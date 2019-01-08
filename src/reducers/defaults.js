@@ -1,8 +1,7 @@
-import { getData } from 'constants/Defaults'
+import { getDefaults } from 'constants/Defaults'
 
-const DEFAULTS = getData();
+const DEFAULTS = getDefaults();
 
 export default function (state = DEFAULTS) {
     return state;
 }
-

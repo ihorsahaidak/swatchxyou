@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Configurator from 'components/Configurator'
 import LoopItem from 'components/Watch/Loop'
+import {connect} from "react-redux";
 
 class Loop extends Component {
     render() {
@@ -9,9 +10,9 @@ class Loop extends Component {
                 <div className={'two-columns'}>
                     <Configurator />
                     <div className={'bar-page'}>
-                        <LoopItem code={ 999 } />
-                        <LoopItem code={ 222 } />
-                        <LoopItem code={ 666 } />
+                        { this.props.defaults['gent']['loops'].map((code, index) =>
+                            <LoopItem key={index} code={ code } />
+                        ) }
                     </div>
                 </div>
             </div>
@@ -19,4 +20,11 @@ class Loop extends Component {
     }
 }
 
-export default Loop;
+export default connect(
+    state => ({
+        defaults: state.defaults,
+    }),
+    dispatch => ({}),
+    null,
+    { pure: false }
+) (Loop);
