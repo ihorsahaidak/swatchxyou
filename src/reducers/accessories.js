@@ -1,12 +1,13 @@
 export default function (state = [], action) {
-    if (action.type === 'ADD_ACCESSORY') {
-        return [
-            ...state,
-            action.payload
-        ]
-    } else if (action.type === 'REMOVE_ACCESSORY') {
-        return state;
+    switch(action.type) {
+        case 'ADD_ACCESSORY':
+            return [
+                ...state,
+                action.payload
+            ];
+        case 'REMOVE_ACCESSORY':
+            return state; // TODO remove accessory
+        default:
+            return state;
     }
-
-    return state;
 }

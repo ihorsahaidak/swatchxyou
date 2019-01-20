@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Pipe from 'components/Pipe'
 import WatchModels from 'components/WatchModels'
 
-class WatchModel extends React.Component {
+class WatchModel extends Component {
     setWatchModel (e) {
         this.props.onSetWatchModel(e.currentTarget.dataset.value);
+        this.props.history.push('/watch-head');
     }
+
     render() {
         return (
             <div className={'two-columns'}>

@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
+import {connect} from "react-redux";
 import Configurator from 'components/Configurator'
 import LoopItem from 'components/Watch/Loop'
-import {connect} from "react-redux";
+import { getItems } from 'constants/Items'
 
 class Loop extends Component {
     render() {
+        let items = getItems(this.props.watchmodel);
+
         return (
             <div>
                 <div className={'two-columns'}>
                     <Configurator />
                     <div className={'bar-page'}>
-                        { this.props.defaults['gent']['loops'].map((code, index) =>
-                            <LoopItem key={index} code={ code } />
+                        { items['loops'].map((code, index) =>
+                            <LoopItem key={index} code={ code } history={ this.props.history } />
                         ) }
                     </div>
                 </div>
@@ -22,7 +25,7 @@ class Loop extends Component {
 
 export default connect(
     state => ({
-        defaults: state.defaults,
+        watchmodel: state.watchmodel,
     }),
     dispatch => ({}),
     null,

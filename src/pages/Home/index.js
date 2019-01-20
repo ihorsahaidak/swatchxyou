@@ -16,4 +16,4 @@ export default connect(
     dispatch => ({}),
     null,
     { pure: false }
-)(Home);
+) (Home);

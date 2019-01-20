@@ -1,10 +1,11 @@
-const GENT = 'gent';
-const NEW_GENT = 'new_gent';
-const DEFAULT = GENT;
+import { getWatchModels } from 'constants/Items';
+
+const WATCH_MODELS = getWatchModels();
+const DEFAULT = Object.keys(WATCH_MODELS)[0];
 
 export default function (state = DEFAULT, action) {
     if (action.type === 'SET_WATCH_MODEL') {
-        if ([GENT, NEW_GENT].includes(action.payload)) {
+        if (action.payload in WATCH_MODELS) {
             return action.payload
         }
     }

@@ -20,7 +20,7 @@ class App extends Component {
 
         this.state = {
             scripts: {
-                wow: '/libs/wow/wow.min.js' // TODO
+                wow: '/libs/wow/wow.min.js' // TODO check for another way...
             }
         }
     }

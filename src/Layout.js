@@ -1,7 +1,5 @@
 import React from 'react';
-
 import Navbar from 'components/Navbar';
-
 import './styles.scss';
 
 export default opts => {
@@ -14,9 +12,8 @@ export default opts => {
         </main>
       )
     }
-  }
+  };
 
-  // make parameters
   if (typeof opts === 'function') {
     return Layout(opts);
   }

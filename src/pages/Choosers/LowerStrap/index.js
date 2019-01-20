@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
+import {connect} from "react-redux";
 import Configurator from 'components/Configurator'
 import LowerStrapItem from 'components/Watch/LowerStrap'
-import {connect} from "react-redux";
+import { getItems } from 'constants/Items'
 
 class LowerStrap extends Component {
     render() {
+        let items = getItems(this.props.watchmodel);
+
         return (
             <div className={'two-columns'}>
                 <Configurator />
                 <div className={'bar-page'}>
-                    { this.props.defaults['gent']['lowerstraps'].map((code, index) =>
-                        <LowerStrapItem key={index} code={ code } />
+                    { items['lowerstraps'].map((code, index) =>
+                        <LowerStrapItem key={index} code={ code } history={ this.props.history } />
                     ) }
                 </div>
             </div>
@@ -20,7 +23,7 @@ class LowerStrap extends Component {
 
 export default connect(
     state => ({
-        defaults: state.defaults,
+        watchmodel: state.watchmodel,
     }),
     dispatch => ({}),
     null,

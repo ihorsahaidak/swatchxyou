@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import defaults from './defaults';
+import common from './common';
 import watchmodel from './watchmodel';
 import watchhead from './watchhead';
 import upperstrap from './upperstrap';
@@ -8,7 +8,7 @@ import accessories from './accessories';
 import loop from './loop';
 
 export default combineReducers({
-    defaults,
+    common,
     watchmodel,
     watchhead,
     upperstrap,
