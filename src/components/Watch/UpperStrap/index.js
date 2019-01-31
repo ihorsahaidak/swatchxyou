@@ -16,7 +16,7 @@ class UpperStrap extends Component {
 
     render() {
         return (
-            <button onClick={ this.setUpperStrap.bind(this) } data-code={ this.props.code }>
+            <button className={ this.props.className } onClick={ this.setUpperStrap.bind(this) } data-code={ this.props.code }>
                 <img src={ this.getImageSrcByCode(this.props.code) } alt=""/>
             </button>
         );

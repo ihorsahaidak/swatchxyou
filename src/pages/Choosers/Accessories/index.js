@@ -3,6 +3,7 @@ import {connect} from "react-redux";
 import Configurator from 'components/Configurator'
 import AccessoryItem from 'components/Watch/Accessory'
 import { getItems } from 'constants/Items'
+import Pipe from 'components/Pipe'
 
 const ACCESSORY_TYPE_LOOP_LARGE = 'loops_large';
 const ACCESSORY_TYPE_PINS = 'pins';
@@ -17,17 +18,21 @@ class Accessories extends Component {
                 <div className={'two-columns'}>
                     <Configurator />
                     <div className={'bar-page'}>
-                        { items['accessories'][ACCESSORY_TYPE_LOOP_LARGE].map((code, index) =>
-                            <AccessoryItem key={index} code={ code } type={ ACCESSORY_TYPE_LOOP_LARGE } history={ this.props.history } />
-                        ) }
+                        <Pipe>
+                            { items['accessories'][ACCESSORY_TYPE_LOOP_LARGE].map((code, index) =>
+                                <AccessoryItem className={'pipe-element wow flipInY'} key={index} code={ code } type={ ACCESSORY_TYPE_LOOP_LARGE } history={ this.props.history } />
+                            ) }
+                        </Pipe>
                     </div>
 
                     <hr/>
 
                     <div className={'bar-page'}>
-                        { items['accessories'][ACCESSORY_TYPE_PINS].map((code, index) =>
-                            <AccessoryItem key={index} code={ code } type={ ACCESSORY_TYPE_PINS } history={ this.props.history } />
-                        ) }
+                        <Pipe>
+                            { items['accessories'][ACCESSORY_TYPE_PINS].map((code, index) =>
+                                <AccessoryItem className={'pipe-element wow flipInY'} key={index} code={ code } type={ ACCESSORY_TYPE_PINS } history={ this.props.history } />
+                            ) }
+                        </Pipe>
                     </div>
 
                     <hr/>

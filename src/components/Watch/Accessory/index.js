@@ -15,11 +15,9 @@ class Accessory extends Component {
 
     render() {
         return (
-            <div>
-                <button onClick={ this.addAccessory.bind(this) } data-code={ this.props.code }>
-                    <img src={ this.getImageSrcByCode(this.props.code, this.props.type) } alt=""/>
-                </button>
-            </div>
+            <button className={ this.props.className } onClick={ this.addAccessory.bind(this) } data-code={ this.props.code }>
+                <img src={ this.getImageSrcByCode(this.props.code, this.props.type) } alt=""/>
+            </button>
         );
     }
 }

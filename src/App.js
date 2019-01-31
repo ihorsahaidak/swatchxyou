@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom';
-import { connect } from 'react-redux';
+import React, { Component } from 'react'
+import { Switch, Route } from 'react-router-dom'
+import { connect } from 'react-redux'
 import withLayout from './Layout'
 import Home from 'pages/Home'
 import StartBuilding from 'pages/StartBuilding'

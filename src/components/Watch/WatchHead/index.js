@@ -16,7 +16,7 @@ class WatchHead extends Component {
 
     render() {
         return (
-            <button onClick={ this.setWatchHead.bind(this) } data-code={ this.props.code }>
+            <button className={ this.props.className } onClick={ this.setWatchHead.bind(this) } data-code={ this.props.code }>
                 <img src={ this.getImageSrcByCode(this.props.code) } alt=""/>
             </button>
         );

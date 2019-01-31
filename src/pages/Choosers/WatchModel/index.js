@@ -15,12 +15,12 @@ class WatchModel extends Component {
                 <WatchModels/>
                 <div className={'bar-page'}>
                     <Pipe>
-                        <div>
+                        <div className={ 'wow flipInY' } >
                             <button onClick={ this.setWatchModel.bind(this) } className="pipe-element watch-model-element" data-value="gent">
                                 gent
                             </button>
                         </div>
-                        <div>
+                        <div className={ 'wow flipInY' }>
                             <button onClick={ this.setWatchModel.bind(this) } className="pipe-element watch-model-element" data-value="new_gent">
                                 new_gent
                             </button>

@@ -1,6 +1,6 @@
-import React from 'react';
-import Navbar from 'components/Navbar';
-import './styles.scss';
+import React from 'react'
+import Navbar from 'components/Navbar'
+import './styles.scss'
 
 export default opts => {
   const Layout = Component => class extends React.Component {

@@ -3,6 +3,7 @@ import {connect} from "react-redux";
 import Configurator from 'components/Configurator'
 import WatchHeadItem from 'components/Watch/WatchHead'
 import { getItems } from 'constants/Items'
+import Pipe from 'components/Pipe'
 
 const DEFAULT_ITEMS_NAME = 'watchheads';
 
@@ -14,9 +15,12 @@ class WatchHead extends Component {
             <div className={'two-columns'}>
                 <Configurator />
                 <div className={'bar-page'}>
-                    { items[DEFAULT_ITEMS_NAME].map((code, index) =>
-                        <WatchHeadItem key={index} code={ code } history={ this.props.history } />
-                    ) }
+                    <Pipe>
+                        { items[DEFAULT_ITEMS_NAME].map((code, index) =>
+                            <WatchHeadItem className={'pipe-element wow flipInY'} key={index} code={ code } history={ this.props.history } />
+                        ) }
+                    </Pipe>
+
                 </div>
             </div>
         );
