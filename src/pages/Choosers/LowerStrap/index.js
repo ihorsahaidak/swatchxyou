@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {connect} from "react-redux";
 import Configurator from 'components/Configurator'
 import LowerStrapItem from 'components/Watch/LowerStrap'
-import { getItems } from 'constants/Items'
+import {getItems} from 'constants/Items'
 import Pipe from 'components/Pipe'
 
 const ITEMS_NAME = 'lowerstraps';

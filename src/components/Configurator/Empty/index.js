@@ -1,26 +1,25 @@
-import React, { Component } from 'react';
-import { connect } from "react-redux";
+import React, {Component} from 'react';
+import {connect} from "react-redux";
 import './styles.scss';
 
-const DS = '/';
-const IMAGE_URL_PREFIX = process.env.PUBLIC_URL + '/images/';
-
 class Empty extends Component {
-    render() {
-        let watchModel = this.props.watchmodel;
+    getImageSrc (name) {
+        return `${process.env.PUBLIC_URL}/images/${this.props.watchmodel}/empty/${name}.png`;
+    }
 
+    render() {
         return (
             <div className={ 'empty-watch-shape-wrapper' } >
-                <div className={ 'empty-shape empty-new-gent' }>
+                <div className={ 'empty-shape' }>
                     <div>
-                        <img src={IMAGE_URL_PREFIX + DS + watchModel + DS + 'empty/full_shadow.png'} alt=""/>
-                        <img src={IMAGE_URL_PREFIX + DS + watchModel + DS + 'empty/needle_hours.png'} alt=""/>
-                        <img src={IMAGE_URL_PREFIX + DS + watchModel + DS + 'empty/needle_minutes.png'} alt=""/>
-                        <img src={IMAGE_URL_PREFIX + DS + watchModel + DS + 'empty/needle_seconds.png'} alt=""/>
-                        <img src={IMAGE_URL_PREFIX + DS + watchModel + DS + 'empty/watch_black_logo.png'} alt=""/>
-                        <img src={IMAGE_URL_PREFIX + DS + watchModel + DS + 'empty/buckle.png'} alt=""/>
-                        <img src={IMAGE_URL_PREFIX + DS + watchModel + DS + 'empty/loop.png'} alt=""/>
-                        <img src={IMAGE_URL_PREFIX + DS + watchModel + DS + 'empty/under_watch.png'} alt=""/>
+                        <img src={this.getImageSrc('full_shadow')} alt=""/>
+                        <img src={this.getImageSrc('needle_hours')} alt=""/>
+                        <img src={this.getImageSrc('needle_minutes')} alt=""/>
+                        <img src={this.getImageSrc('needle_seconds')} alt=""/>
+                        <img src={this.getImageSrc('watch_black_logo')} alt=""/>
+                        <img src={this.getImageSrc('buckle')} alt=""/>
+                        <img src={this.getImageSrc('loop')} alt=""/>
+                        <img src={this.getImageSrc('under_watch')} alt=""/>
                     </div>
                 </div>
             </div>
@@ -34,5 +33,5 @@ export default connect(
     }),
     dispatch => ({}),
     null,
-    { pure: false }
+    {pure: false}
 ) (Empty);
