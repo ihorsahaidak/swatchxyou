@@ -1,6 +1,6 @@
-import React, { Component, useState } from 'react'
-import { Switch, Route } from 'react-router-dom'
-import { connect } from 'react-redux'
+import React, {Component} from 'react'
+import {Switch, Route} from 'react-router-dom'
+import {connect} from 'react-redux'
 import withLayout from './Layout'
 import Home from 'pages/Home'
 import StartBuilding from 'pages/StartBuilding'
@@ -12,13 +12,7 @@ import Loop from 'pages/Choosers/Loop'
 import Accessories from 'pages/Choosers/Accessories'
 import Preview from 'pages/Preview'
 import About from 'pages/About'
-
-
-import {
-    CSSTransition,
-    TransitionGroup
-} from 'react-transition-group';
-
+import {CSSTransition, TransitionGroup} from 'react-transition-group';
 
 @withLayout
 class App extends Component {
@@ -48,8 +42,6 @@ class App extends Component {
   render() {
         return (
             <Switch>
-
-
                 <Route
                     render={({ location }) => {
                         const { pathname } = location;
@@ -66,18 +58,18 @@ class App extends Component {
                                     <Route
                                         location={location}
                                         render={() => (
-                                            <Switch>
-                                                <Route exact path='/' component={Home} />
-                                                <Route exact path='/start-building' component={StartBuilding} />
-                                                <Route exact path='/watch-model' component={WatchModel} />
-                                                <Route exact path='/watch-head' component={WatchHead} />
-                                                <Route exact path='/upper-strap' component={UpperStrap} />
-                                                <Route exact path='/lower-strap' component={LowerStrap} />
-                                                <Route exact path='/loop' component={Loop} />
-                                                <Route exact path='/accessories' component={Accessories} />
-                                                <Route exact path='/preview' component={Preview} />
-                                                <Route path='/about' component={About} />
-                                            </Switch>
+                                        <Switch>
+                                            <Route exact path='/' component={Home} />
+                                            <Route exact path='/start-building' component={StartBuilding} />
+                                            <Route exact path='/watch-model' component={WatchModel} />
+                                            <Route exact path='/watch-head' component={WatchHead} />
+                                            <Route exact path='/upper-strap' component={UpperStrap} />
+                                            <Route exact path='/lower-strap' component={LowerStrap} />
+                                            <Route exact path='/loop' component={Loop} />
+                                            <Route exact path='/accessories' component={Accessories} />
+                                            <Route exact path='/preview' component={Preview} />
+                                            <Route path='/about' component={About} />
+                                        </Switch>
                                         )}
                                     />
                                 </CSSTransition>
@@ -94,5 +86,5 @@ export default connect(
     state => ({}),
     dispatch => ({}),
     null,
-    { pure: false }
-)(App);
+    {pure: false}
+) (App);
