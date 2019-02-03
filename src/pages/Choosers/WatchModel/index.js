@@ -1,12 +1,14 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import Pipe from 'components/Pipe'
 import WatchModels from 'components/WatchModels'
+
+const NEXT_PAGE = '/watch-head';
 
 class WatchModel extends Component {
     setWatchModel (e) {
         this.props.onSetWatchModel(e.currentTarget.dataset.value);
-        this.props.history.push('/watch-head');
+        this.props.history.push(NEXT_PAGE);
     }
 
     render() {
@@ -15,13 +17,13 @@ class WatchModel extends Component {
                 <WatchModels/>
                 <div className={'bar-page'}>
                     <Pipe>
-                        <div className={ 'wow flipInY' } >
-                            <button onClick={ this.setWatchModel.bind(this) } className="pipe-element watch-model-element" data-value="gent">
+                        <div className={'pipe-element'} >
+                            <button onClick={ this.setWatchModel.bind(this) } className="wow flipInY" data-value="gent">
                                 gent
                             </button>
                         </div>
-                        <div className={ 'wow flipInY' }>
-                            <button onClick={ this.setWatchModel.bind(this) } className="pipe-element watch-model-element" data-value="new_gent">
+                        <div className={'pipe-element'}>
+                            <button onClick={ this.setWatchModel.bind(this) } className="wow flipInY" data-value="new_gent">
                                 new_gent
                             </button>
                         </div>
@@ -42,5 +44,5 @@ export default connect(
         }
     }),
     null,
-    { pure: false }
+    {pure: false}
 ) (WatchModel);

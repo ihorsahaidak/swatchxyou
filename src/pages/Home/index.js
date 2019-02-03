@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
 
 class Home extends Component {
     render() {
@@ -15,5 +15,5 @@ export default connect(
     state => ({}),
     dispatch => ({}),
     null,
-    { pure: false }
+    {pure: false}
 ) (Home);

@@ -1,24 +1,27 @@
-import React, { Component } from 'react';
-import { connect } from "react-redux";
+import React, {Component} from 'react';
+import {connect} from "react-redux";
 
-const DS = '/';
 const ELEMENTS_FOLDER = 'upperstraps';
+const NEXT_PAGE = '/lower-strap';
+const ALT = 'Upper Strap';
 
 class UpperStrap extends Component {
     setUpperStrap (e) {
         this.props.onSetUpperStrap(e.currentTarget.dataset.code);
-        this.props.history.push('/lower-strap');
+        this.props.history.push(NEXT_PAGE);
     }
 
     getImageSrcByCode (code) {
-        return process.env.PUBLIC_URL + DS + 'images' + DS + this.props.watchmodel + DS + ELEMENTS_FOLDER + DS + code + '.png';
+        return `${process.env.PUBLIC_URL}/images/${this.props.watchmodel}/${ELEMENTS_FOLDER}/${code}.png`;
     }
 
     render() {
         return (
-            <button className={ this.props.className } onClick={ this.setUpperStrap.bind(this) } data-code={ this.props.code }>
-                <img src={ this.getImageSrcByCode(this.props.code) } alt=""/>
-            </button>
+            <div className={'pipe-element'}>
+                <button className={'wow flipInY'} onClick={this.setUpperStrap.bind(this)} data-code={this.props.code}>
+                    <img src={this.getImageSrcByCode(this.props.code) } alt={ALT} />
+                </button>
+            </div>
         );
     }
 }
@@ -34,5 +37,5 @@ export default connect(
         }
     }),
     null,
-    { pure: false }
+    {pure: false}
 ) (UpperStrap);

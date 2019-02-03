@@ -1,24 +1,35 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {connect} from "react-redux";
 import Configurator from 'components/Configurator'
 import UpperStrapItem from 'components/Watch/UpperStrap'
 import { getItems } from 'constants/Items'
 import Pipe from 'components/Pipe'
 
-const DEFAULT_ITEMS_NAME = 'upperstraps';
+const ITEMS_NAME = 'upperstraps';
 
 class UpperStrap extends Component {
+    getItems () {
+        let items = getItems(this.props.watchmodel)[ITEMS_NAME];
+
+        if (items) {
+            return items
+        }
+
+        return [];
+    }
+
     render() {
-        let items = getItems(this.props.watchmodel);
+        let items = this.getItems();
+        let history = this.props.history;
 
         return (
             <div className={'two-columns'}>
                 <Configurator />
                 <div className={'bar-page'}>
                     <Pipe>
-                        { items[DEFAULT_ITEMS_NAME].map((code, index) =>
-                            <UpperStrapItem className={'pipe-element wow flipInY'} key={index} code={ code } history={ this.props.history } />
-                        ) }
+                        {items.map((code, index) =>
+                            <UpperStrapItem key={index} code={code} history={history} />
+                        )}
                     </Pipe>
                 </div>
             </div>
@@ -32,5 +43,5 @@ export default connect(
     }),
     dispatch => ({}),
     null,
-    { pure: false }
+    {pure: false}
 ) (UpperStrap);

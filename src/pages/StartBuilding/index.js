@@ -1,31 +1,33 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import './styles.scss'
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import Pipe from 'components/Pipe'
+import './styles.scss'
+
+const NEXT_PAGE = '/watch-model';
 
 class StartBuilding extends Component {
     startBuilding () {
-        this.props.history.push('/watch-model');
+        this.props.history.push(NEXT_PAGE);
     }
 
     render() {
         return (
-            <div className={'full-view light-violet'}>
-                <Pipe color={'light-violet'}>
-                        <div className="pipe-element text-element">
-                            <div className="text wow flipInY">
-                                <button onClick={ this.startBuilding.bind(this) } className="bg-light-green">
-                                    start
-                                </button>
-                            </div>
+            <div className={'full-view'}>
+                <Pipe>
+                    <div className="pipe-element">
+                        <div className="wow flipInY">
+                            <button onClick={this.startBuilding.bind(this)}>
+                                start
+                            </button>
                         </div>
-                        <div className="pipe-element text-element">
-                            <div className="text wow flipInY">
-                                <button onClick={ this.startBuilding.bind(this) } className="bg-violet">
-                                    building
-                                </button>
-                            </div>
+                    </div>
+                    <div className="pipe-element">
+                        <div className="wow flipInY">
+                            <button onClick={this.startBuilding.bind(this)}>
+                                building
+                            </button>
                         </div>
+                    </div>
                 </Pipe>
             </div>
         );

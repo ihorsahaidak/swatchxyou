@@ -1,28 +1,28 @@
-import React, { Component } from 'react';
-import { connect } from "react-redux";
-
-const DS = '/';
+import React, {Component} from 'react';
+import {connect} from "react-redux";
 
 class Preview extends Component {
     getImageSrcByCode (subFolder, code, type = null) {
-        return process.env.PUBLIC_URL + DS + 'images' + DS + this.props.watchmodel + DS + subFolder + DS + (type ? type + DS : '') + code + '.png';
+        if (!code) {
+            return '';
+        }
+
+        return `${process.env.PUBLIC_URL}/images/${this.props.watchmodel}/${subFolder}/${(type ? `${type}/` : '')}${code}.png`;
     }
 
     render() {
         return (
             <div>
+                <h1>PREVIEW PAGE</h1>
                 <div className={'c-upper-strap'}>
                     <img src={ this.getImageSrcByCode('upperstraps', this.props.upperstrap) } alt=""/>
                 </div>
-
                 <div className={'c-loop'}>
                     <img src={ this.getImageSrcByCode('loops', this.props.loop) } alt=""/>
                 </div>
-
                 <div className={'c-watch-head'}>
                     <img src={ this.getImageSrcByCode('watchheads', this.props.watchhead) } alt=""/>
                 </div>
-
                 <div className={'c-accessory'}>
                     <ul className="trackList">
                         { this.props.accessories.map((e, index) =>
@@ -30,7 +30,6 @@ class Preview extends Component {
                         ) }
                     </ul>
                 </div>
-
                 <div className={'c-lower-strap'}>
                     <img src={ this.getImageSrcByCode('lowerstraps', this.props.lowerstrap) } alt=""/>
                 </div>
@@ -41,14 +40,14 @@ class Preview extends Component {
 
 export default connect(
     state => ({
+        watchmodel: state.watchmodel,
         watchhead: state.watchhead,
         upperstrap: state.upperstrap,
         lowerstrap: state.lowerstrap,
         accessories: state.accessories,
         loop: state.loop,
-        watchmodel: state.watchmodel,
     }),
     dispatch => ({}),
     null,
-    { pure: false }
+    {pure: false}
 ) (Preview);
