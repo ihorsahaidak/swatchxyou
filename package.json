@@ -100,5 +100,11 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "devDependencies": {
+    "classnames": "^2.2.6",
+    "prop-types": "^15.6.2",
+    "react-spring": "^7.2.10",
+    "react-transition-group": "^2.5.3"
   }
 }

@@ -10,4 +10,9 @@
     @include media("<=mobile") {
         padding: .5rem 1rem;
     }
+
+    padding: 1rem 2rem;
+    position: fixed;
+    z-index: 222;
+    background: #fff;
 }

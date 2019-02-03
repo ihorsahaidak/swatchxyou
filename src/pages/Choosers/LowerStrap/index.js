@@ -4,6 +4,7 @@ import Configurator from 'components/Configurator'
 import LowerStrapItem from 'components/Watch/LowerStrap'
 import {getItems} from 'constants/Items'
 import Pipe from 'components/Pipe'
+import Page from 'components/Page'
 
 const ITEMS_NAME = 'lowerstraps';
 
@@ -23,16 +24,18 @@ class LowerStrap extends Component {
         let history = this.props.history;
 
         return (
-            <div className={'two-columns'}>
-                <Configurator />
-                <div className={'bar-page'}>
-                    <Pipe>
-                        {items.map((code, index) =>
-                            <LowerStrapItem key={index} code={code} history={history} />
-                        )}
-                    </Pipe>
+            <Page color="#cc99ff" background="#280051">
+                <div className={'two-columns'}>
+                    <Configurator />
+                    <div className={'bar-page'}>
+                        <Pipe>
+                            {items.map((code, index) =>
+                                <LowerStrapItem key={index} code={code} history={history} />
+                            )}
+                        </Pipe>
+                    </div>
                 </div>
-            </div>
+            </Page>
         );
     }
 }

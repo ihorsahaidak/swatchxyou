@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import Pipe from 'components/Pipe'
+import Page from 'components/Page'
 import './styles.scss'
 
 const NEXT_PAGE = '/watch-model';
@@ -12,7 +13,7 @@ class StartBuilding extends Component {
 
     render() {
         return (
-            <div className={'full-view'}>
+            <Page color="#cc99ff" background="#280051">
                 <Pipe>
                     <div className="pipe-element">
                         <div className="wow flipInY">
@@ -29,7 +30,7 @@ class StartBuilding extends Component {
                         </div>
                     </div>
                 </Pipe>
-            </div>
+            </Page>
         );
     }
 }

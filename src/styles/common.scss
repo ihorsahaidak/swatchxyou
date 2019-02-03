@@ -1,27 +1,50 @@
 .two-columns {
   display: flex;
+  flex-wrap: wrap;
 }
 
 
 
-.full-view {
-  width: 100vw;
+
+
+
+
+
+
+
+
+
+.page {
   height: 100vh;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+  transition: transform 1s ease-in-out;
 }
 
-
-
-
-.configurator-wrapper {
-  height: 100vh;
-  background: #fff;
-  width: 25%;
+.page-enter {
+  transform: translate(-100%, 0);
 }
 
+.page-enter-active {
+  transform: translate(0, 0);
+}
 
-.watch{
-  width:400px;
-  position:relative;
-  margin:0 auto;
+.page-exit {
+  transform: translate(-100%, 0);
+}
+
+.page--prev.page-enter {
+  transform: translate(100%, 0);
+}
+
+.page--prev.page-enter-active {
+  transform: translate(0, 0);
+}
+
+.page--prev.page-exit {
+  transform: translate(100%, 0);
 }
 

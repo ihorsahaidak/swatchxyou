@@ -4,6 +4,7 @@ import Configurator from 'components/Configurator'
 import WatchHeadItem from 'components/Watch/WatchHead'
 import {getItems} from 'constants/Items'
 import Pipe from 'components/Pipe'
+import Page from 'components/Page'
 
 const ITEMS_NAME = 'watchheads';
 
@@ -23,16 +24,16 @@ class WatchHead extends Component {
         let history = this.props.history;
 
         return (
-            <div className={'two-columns'}>
-                <Configurator />
-                <div className={'bar-page'}>
+            <Page color="#cc99ff" background="#280051">
+                <div className={'two-columns'}>
+                    <Configurator/>
                     <Pipe>
                         {items.map((code, index) =>
                             <WatchHeadItem key={index} code={code} history={history} />
                         )}
                     </Pipe>
                 </div>
-            </div>
+            </Page>
         );
     }
 }

@@ -6,12 +6,13 @@ import { createStore } from 'redux'
 import reducer from './reducers'
 import App from './App'
 
+const supportsHistory = 'pushState' in window.history;
 const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 const root = document.getElementById('root');
 
 ReactDOM.render(
     <Provider store={ store }>
-        <BrowserRouter>
+        <BrowserRouter forceRefresh={!supportsHistory}>
             <App />
         </BrowserRouter>
     </Provider>,

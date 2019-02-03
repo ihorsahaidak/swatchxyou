@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import Pipe from 'components/Pipe'
 import WatchModels from 'components/WatchModels'
+import Pipe from 'components/Pipe'
+import Page from 'components/Page'
 
 const NEXT_PAGE = '/watch-head';
 
@@ -13,23 +14,25 @@ class WatchModel extends Component {
 
     render() {
         return (
-            <div className={'two-columns'}>
-                <WatchModels/>
-                <div className={'bar-page'}>
-                    <Pipe>
-                        <div className={'pipe-element'} >
-                            <button onClick={ this.setWatchModel.bind(this) } className="wow flipInY" data-value="gent">
-                                gent
-                            </button>
-                        </div>
-                        <div className={'pipe-element'}>
-                            <button onClick={ this.setWatchModel.bind(this) } className="wow flipInY" data-value="new_gent">
-                                new_gent
-                            </button>
-                        </div>
-                    </Pipe>
+            <Page color="#cc99ff" background="#280051">
+                <div className={'two-columns'}>
+                    <WatchModels/>
+                    <div className={'bar-page'}>
+                        <Pipe>
+                            <div className={'pipe-element'} >
+                                <button onClick={ this.setWatchModel.bind(this) } className="wow flipInY" data-value="gent">
+                                    gent
+                                </button>
+                            </div>
+                            <div className={'pipe-element'}>
+                                <button onClick={ this.setWatchModel.bind(this) } className="wow flipInY" data-value="new_gent">
+                                    new_gent
+                                </button>
+                            </div>
+                        </Pipe>
+                    </div>
                 </div>
-            </div>
+            </Page>
         );
     }
 }

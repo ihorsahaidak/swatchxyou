@@ -11,7 +11,7 @@ class Configurator extends Component {
 
     render() {
         return (
-            <div className={`configurator-wrapper ${this.props.watchmodel}`}>
+            <div className={`configurator ${this.props.watchmodel}`}>
                 <Empty />
                 <div className={'c-upper-strap'}>
                     <img src={this.getImageSrc('upperstraps', this.props.upperstrap)} alt=""/>

@@ -4,13 +4,14 @@ import Configurator from 'components/Configurator'
 import LoopItem from 'components/Watch/Loop'
 import { getItems } from 'constants/Items'
 import Pipe from 'components/Pipe'
+import Page from 'components/Page'
 
 class Loop extends Component {
     render() {
         let items = getItems(this.props.watchmodel);
 
         return (
-            <div>
+            <Page color="#cc99ff" background="#280051">
                 <div className={'two-columns'}>
                     <Configurator />
                     <div className={'bar-page'}>
@@ -21,7 +22,7 @@ class Loop extends Component {
                         </Pipe>
                     </div>
                 </div>
-            </div>
+            </Page>
         );
     }
 }
