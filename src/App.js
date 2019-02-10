@@ -16,30 +16,11 @@ import {CSSTransition, TransitionGroup} from 'react-transition-group';
 
 @withLayout
 class App extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            scripts: {
-                wow: '/libs/wow/wow.min.js' // TODO check for another way...
-            }
-        }
-    }
-
     componentWillMount() {
-        let script = document.createElement('script');
-
-        script.src = this.state.scripts.wow;
-        script.async = true;
-
-        script.onload = function() {
-            new window.WOW().init();
-        };
-
-        document.body.appendChild(script);
+        new window.WOW().init();
     }
 
-  render() {
+    render() {
         return (
             <Switch>
                 <Route
@@ -80,7 +61,7 @@ class App extends Component {
                 />
             </Switch>
         );
-  }
+    }
 }
 
 export default connect(

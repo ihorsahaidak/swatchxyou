@@ -10,9 +10,12 @@ class WatchHead extends Component {
     }
 
     getStyles() {
+        let rotateDeg = this.props.rotateDeg ? this.props.rotateDeg : 0
+
         return {
             'top': this.props.top,
             'left': this.props.left,
+            'transform': `rotate(${rotateDeg}deg)`
         }
     }
 
@@ -31,11 +34,7 @@ export default connect(
     state => ({
         watchhead: state.watchhead,
     }),
-    dispatch => ({
-        onSetWatchHead: (i) => {
-            dispatch({type: 'SET_WATCH_HEAD', payload: i});
-        }
-    }),
+    dispatch => ({}),
     null,
     {pure: false}
 ) (WatchHead);

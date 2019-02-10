@@ -4,6 +4,8 @@ import Pipe from 'components/Pipe'
 import Page from 'components/Page'
 import NextButton from 'components/NextButton'
 import SingleWatchHeadItem from 'components/SingleItems/WatchHead'
+import SingleUpperStrapItem from 'components/SingleItems/UpperStrap'
+import SingleLowerStrapItem from 'components/SingleItems/LowerStrap'
 import './styles.scss'
 
 const NEXT_PAGE = '/watch-model';
@@ -38,7 +40,12 @@ class Home extends Component {
 
                 <div className={'single-items-wrapper'}>
                     <SingleWatchHeadItem singleWatchmodel={'gent'} code={'HGW187_sa000_sr11a'} left={'62%'} top={'10%'} animationClassName={'flipInY'} />
-                    <SingleWatchHeadItem singleWatchmodel={'new_gent'} code={'HSUOR111_sa000_sr11a'} left={'15%'} top={'65%'} animationClassName={'flipInY'} />
+                    <SingleWatchHeadItem singleWatchmodel={'new_gent'} code={'HSUOR111_sa000_sr11a'} left={'20%'} top={'65%'} animationClassName={'flipInY'} />
+                    <SingleUpperStrapItem singleWatchmodel={'new_gent'} code={'ACM0025H12_sa000_sr11b'} left={'35%'} top={'4%'} animationClassName={'flipInY'} rotateDeg={90} />
+                    <SingleUpperStrapItem singleWatchmodel={'new_gent'} code={'ACM0027H12_sa000_sr11b'} left={'75%'} top={'60%'} animationClassName={'flipInY'} rotateDeg={90} />
+                    <SingleLowerStrapItem singleWatchmodel={'new_gent'} code={'ACM0006H6_sa000_sr11b'} left={'75%'} top={'45%'} animationClassName={'flipInY'} rotateDeg={90} />
+                    <SingleLowerStrapItem singleWatchmodel={'new_gent'} code={'ACM0008H6_sa000_sr11b'} left={'8%'} top={'45%'} animationClassName={'flipInY'} />
+
                 </div>
             </Page>
         );
