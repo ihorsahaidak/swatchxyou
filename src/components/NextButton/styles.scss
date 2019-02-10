@@ -1,0 +1,19 @@
+.next-button {
+  border-radius: 5px;
+  padding: 15px 25px;
+  font-size: 22px;
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  border: none;
+  font-family: 'swatch_ct_regular-webfont', Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  outline: none;
+  box-shadow: rgba(0, 0, 0, .3) -20px 5px 30px;
+
+  &:active {
+    transform: translate(0px, 2px);
+    -webkit-transform: translate(0px, 2px);
+  }
+}

@@ -14,7 +14,7 @@ class WatchModel extends Component {
 
     render() {
         return (
-            <Page color="#cc99ff" background="#280051">
+            <Page color="#cc99ff" background="#280051" prevPage={'start-building'} currentPage={'watch-model'}>
                 <div className={'two-columns'}>
                     <WatchModels/>
                     <div className={'bar-page'}>

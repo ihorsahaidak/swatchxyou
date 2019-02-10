@@ -13,7 +13,7 @@ class StartBuilding extends Component {
 
     render() {
         return (
-            <Page color="#cc99ff" background="#280051">
+            <Page color="#cc99ff" background="#280051" prevPage={'home'} currentPage={'start-building'}>
                 <Pipe>
                     <div className="pipe-element">
                         <div className="wow flipInY">

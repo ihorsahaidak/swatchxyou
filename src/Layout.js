@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from 'components/Navbar'
 import './styles.scss'
 
 export default opts => {
@@ -7,7 +6,6 @@ export default opts => {
     render() {
       return (
         <main>
-          <Navbar />
           <Component {...this.props} />
         </main>
       )

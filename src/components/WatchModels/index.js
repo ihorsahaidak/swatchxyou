@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './styles.scss'
-import {connect} from "react-redux";
+import {connect} from 'react-redux';
 
 
 class WatchModels extends Component {

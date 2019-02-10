@@ -24,7 +24,7 @@ class WatchHead extends Component {
         let history = this.props.history;
 
         return (
-            <Page color="#cc99ff" background="#280051">
+            <Page color="#cc99ff" background="#280051" prevPage={'watch-model'} currentPage={'watch-head'}>
                 <div className={'two-columns'}>
                     <Configurator/>
                     <Pipe>

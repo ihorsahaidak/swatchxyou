@@ -4,12 +4,12 @@ import {connect} from 'react-redux'
 import withLayout from './Layout'
 import Home from 'pages/Home'
 import StartBuilding from 'pages/StartBuilding'
-import WatchModel from 'pages/Choosers/WatchModel'
-import WatchHead from 'pages/Choosers/WatchHead'
-import UpperStrap from 'pages/Choosers/UpperStrap'
-import LowerStrap from 'pages/Choosers/LowerStrap'
-import Loop from 'pages/Choosers/Loop'
-import Accessories from 'pages/Choosers/Accessories'
+import WatchModel from 'pages/WatchModel'
+import WatchHead from 'pages/WatchHead'
+import UpperStrap from 'pages/UpperStrap'
+import LowerStrap from 'pages/LowerStrap'
+import Loop from 'pages/Loop'
+import Accessories from 'pages/Accessories'
 import Preview from 'pages/Preview'
 import About from 'pages/About'
 import {CSSTransition, TransitionGroup} from 'react-transition-group';
@@ -51,8 +51,8 @@ class App extends Component {
                                     key={pathname}
                                     classNames="page"
                                     timeout={{
-                                        enter: 1000,
-                                        exit: 1000,
+                                        enter: 5000,
+                                        exit: 5000,
                                     }}
                                 >
                                     <Route
@@ -69,6 +69,7 @@ class App extends Component {
                                             <Route exact path='/accessories' component={Accessories} />
                                             <Route exact path='/preview' component={Preview} />
                                             <Route path='/about' component={About} />
+                                            <Route render={() => <div>NOT FOUND !</div>} />
                                         </Switch>
                                         )}
                                     />

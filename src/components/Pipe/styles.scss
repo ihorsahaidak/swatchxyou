@@ -29,10 +29,10 @@
             position: relative;
             background: transparent;
             border: none;
+            text-align: center;
 
             button {
                 background: transparent;
-                border: none;
             }
 
             i {
@@ -60,7 +60,7 @@
 
             &:before {
                 height: 77px;
-                top: -20px;
+                top: -24px;
                 box-shadow: 0 0 0.6em 0.2em #ccc inset;
                 clip-path: polygon(100% 0, 100% 75%, 50% 100%, 0 75%, 0 0);
             }
