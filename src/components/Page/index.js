@@ -4,38 +4,18 @@ import {connect} from "react-redux";
 import './styles.scss'
 
 class Page extends Component {
-       constructor(props) {
+    constructor(props) {
         super(props);
 
+        props.onSetPage(this.props.currentPage);
 
-        let curr = this.props.currentPage;
-        let prev = this.props.prevPage;
-
-        let isPrev = this.props.currentPage == this.props.pageState;
-
-           console.log(curr, isPrev);
-
-          // props.onSetPage(curr);
-
-
-           //console.log(this.props.currentPage);
-    }
-
-    getIsPrev() {
-        //console.log(this.props.currentPage , this.props.pageState);
-
-
-        return this.props.currentPage !== this.props.pageState;
+      //  console.log(22);
     }
 
     getClassNames() {
-
-
-        let ps = this.getIsPrev();
-
         return classNames({
             'page': true,
-            'page--prev': ps//this.props.pageState,
+            'page--prev': this.props.pageState[this.props.currentPage],
         });
     }
     getStyles() {
@@ -61,7 +41,7 @@ export default connect(
     }),
     dispatch => ({
         onSetPage: (i) => {
-            dispatch({type: 'SET_PREV', payload: i});
+            dispatch({type: 'SET_CURRENT', payload: i});
         }
     }),
     null,
